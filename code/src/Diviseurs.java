@@ -1,2 +1,10 @@
-package PACKAGE_NAME;public class Diviseurs {
+import bdd.BDD;
+
+
+
+public class Diviseurs {
+    public static void main(String[] args) throws ClassNotFoundException {
+
+
+    }
 }
