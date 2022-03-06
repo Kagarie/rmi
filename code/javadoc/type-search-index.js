@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"bdd","l":"BDD"},{"p":"<Unnamed>","l":"Diviseurs"}]
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"bdd","l":"BDD"},{"p":"serveur","l":"CalculateurFonctions"},{"p":"serveur","l":"calculateurFonctionsImp"},{"p":"<Unnamed>","l":"Diviseurs"},{"p":"test","l":"TestBDD"},{"p":"test","l":"TestCalculateurFonctions"}]
