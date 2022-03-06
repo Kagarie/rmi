@@ -20,6 +20,8 @@ public class BDD {
      * @throws ClassNotFoundException
      */
     public BDD() throws ClassNotFoundException {
+
+        //Demande des paramètres pour la connexion à la BDD
         Scanner sc = new Scanner(System.in);
         System.out.println("Nom de la Base de donnée:");
         String name = sc.nextLine();
@@ -33,6 +35,7 @@ public class BDD {
         String password = sc.nextLine();
 
         String url = "jdbc:postgresql://localhost:" + port + "/" + name;
+        //Connexion à la BDD
         try {
             Class.forName("org.postgresql.Driver");
             this.co = DriverManager.getConnection(url, user, password);
@@ -44,7 +47,7 @@ public class BDD {
     }
 
     /**
-     * Fonction pour assérer une valeur dans la table
+     * Fonction pour inssérer une valeur dans la table
      *
      * @param value
      */
