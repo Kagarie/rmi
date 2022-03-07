@@ -1,4 +1,4 @@
 javadoc/
 out/
-code.iml
+*.iml
 .idea/
