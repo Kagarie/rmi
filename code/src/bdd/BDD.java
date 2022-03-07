@@ -27,8 +27,10 @@ public class BDD {
         String name = sc.nextLine();
         System.out.println("Port de la Base de donnée: (par défaut 5432)");
         String port = sc.nextLine();
-        if (Objects.equals(port, ""))
+        if (Objects.equals(port, "")) {
+            System.out.println("5432");
             port = "5432";
+        }
         System.out.println("Utilisateurs de la Base de donnée:");
         String user = sc.nextLine();
         System.out.println("Mot de passe de la Base de donnée:");
