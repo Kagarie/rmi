@@ -5,7 +5,7 @@ import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CalculateurFonctions implements calculateurFonctionsImp {
+public class CalculateurFonctions implements CalculateurFonctionsImp {
 
     /**
      * @param listeNombre
@@ -28,10 +28,11 @@ public class CalculateurFonctions implements calculateurFonctionsImp {
                 /*On test tous les nombres jusqu'à la limite (la racine)
                 / On s'arrête à la racine car au dessus on est sur qu'il est premier
                  */
-                for (int i = 3; i < limite; i++) {
+                for (int i = 2; i < limite; i++) {
                     //Si on obtiens un divisions sans reste le nombre n'est pas premiers donc il ne sera pas ajouté
                     if (nombre.mod(BigInteger.valueOf(i)).compareTo(BigInteger.valueOf(0)) == 0) {
                         notPrimeNumber = true;
+                        break;
                     }
                 }
                 //Si le nombre n'est pas premier on le retient pas

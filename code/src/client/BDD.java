@@ -1,6 +1,7 @@
-package bdd;
+package client;
 
 
+import java.math.BigInteger;
 import java.sql.*;
 import java.util.Objects;
 import java.util.Scanner;
@@ -9,7 +10,7 @@ import java.util.regex.Pattern;
 
 
 /**
- * Class BDD elle gère la connexion entre la class Diviseurs(le pc client) et la bdd
+ * Class BDD elle gère la connexion entre la class Client(le pc client) et la client.bdd
  */
 public class BDD {
     private Connection co;
@@ -53,7 +54,7 @@ public class BDD {
      *
      * @param value
      */
-    public void insert(int value) {
+    public void insert(BigInteger value) {
         try {
             this.sql = "INSERT INTO nombre_premier VALUES (" + value + ");";
             this.stmt.executeUpdate(this.sql);

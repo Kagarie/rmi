@@ -1,12 +1,12 @@
 package serveur;
 
-import java.math.BigInteger;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
-public interface calculateurFonctionsImp extends Remote {
+public interface CalculateurFonctionsImp extends Remote {
     /**
      *
      * @param listeNombre
