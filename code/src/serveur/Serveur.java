@@ -6,7 +6,7 @@ import java.rmi.server.UnicastRemoteObject;
 
 
 public class Serveur {
-    public static void main(int  port) {
+    public static void main(int port) {
         try {
             CalculateurFonctionsImp skeleton = (CalculateurFonctionsImp) UnicastRemoteObject.exportObject(new CalculateurFonctions(), 10000);
             Registry registry = LocateRegistry.createRegistry(port);
@@ -14,8 +14,5 @@ public class Serveur {
         }catch (Exception e){
             e.printStackTrace();
         }
-    }
-
-    public void close(){System.exit(0);
     }
 }

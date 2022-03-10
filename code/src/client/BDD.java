@@ -24,10 +24,12 @@ public class BDD {
 
         //Demande des paramètres pour la connexion à la BDD
         Scanner sc = new Scanner(System.in);
+        System.out.println("Connexion à la bdd");
         System.out.println("Nom de la Base de donnée:");
         String name = sc.nextLine();
         System.out.println("Port de la Base de donnée: (par défaut 5432)");
         String port = sc.nextLine();
+        //Si aucune saisie de l'utilisateurs on utilise le port par défaut
         if (Objects.equals(port, "")) {
             System.out.println("5432");
             port = "5432";
@@ -40,7 +42,7 @@ public class BDD {
         String url = "jdbc:postgresql://localhost:" + port + "/" + name;
         //Connexion à la BDD
         try {
-            Class.forName("org.postgresql.Driver");
+           Class.forName("org.postgresql.Driver");
             this.co = DriverManager.getConnection(url, user, password);
             this.stmt = co.createStatement();
             System.out.println("Connexion réussis\n");
@@ -68,6 +70,10 @@ public class BDD {
                 e.printStackTrace();
         }
     }
+
+    /**
+     * Fonction pour vider la table (utilisé dans la classe TestBDD)
+     */
     public void truncateTable(){
         try {
             this.sql ="truncate table nombre_premier;";
@@ -78,7 +84,7 @@ public class BDD {
     }
 
     /**
-     * Fonction qui retourne tous les enregistrements dans la table
+     * Fonction qui retourne tous les enregistrements dans la table (utilisé dans la classe TestBDD)
      *
      * @return
      */

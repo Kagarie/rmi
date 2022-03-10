@@ -9,7 +9,8 @@ import java.sql.SQLException;
 public class TestBDD {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
         BDD bdd = new BDD();
-        //On plusieurs données à n'autre table
+
+        //On ajoute plusieurs données à n'autre table
         System.out.println("Insertion des valeurs de 1 a 100");
         for (int i = 0; i < 100; i += 1)
             bdd.insert(BigInteger.valueOf(i + 1));
