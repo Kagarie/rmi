@@ -14,7 +14,8 @@ public class Client {
         try {
             bdd = new BDD();
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            e.printStackTrace();*
+            System.exit(1);
         }
 
         // On lance le serveur
